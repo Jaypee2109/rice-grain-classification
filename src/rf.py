@@ -1,8 +1,8 @@
-from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
 
 
-def train_rf(X_train, y_train, param_grid=None, cv=3, n_jobs=-1):
+def train_rf(X_train, y_train, param_grid=None, cv=3, n_jobs=1):
     """
     Train and tune a Random Forest classifier using grid search.
     Falls back to a default Random Forest if grid search fails.

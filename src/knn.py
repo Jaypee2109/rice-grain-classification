@@ -1,8 +1,8 @@
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
 
 
-def train_knn(X_train, y_train, param_grid=None, cv=3, n_jobs=-1):
+def train_knn(X_train, y_train, param_grid=None, cv=3, n_jobs=1):
     """
     Train and tune a KNN classifier using grid search.
     Falls back to a default KNN if grid search fails.
